@@ -26,9 +26,10 @@ $$R \approx UV^T$$
 
 3. **Training:** The goal of optimazation is to minize error J:
 $$J = \frac{1}{2} ||R - UV^T||^2$$
-Since not all items are rated in the matrix R, we only consider the items already been rated. For each observed rating in the training data, the model computes a predicted rating by taking the dot product of the corresponding user $u_i$ and item $v_j$ latent factor vectors.The predicted rating of user $i$ to item $j$ is denoted as $\hat{r}_{ij}
-$.
-$$\hat{r}_{ij} = \sum_{i,j}^{k} u_{i} \cdot v_{j}$$
+Since not all items are rated in the matrix R, we only consider the items already been rated. For each observed rating in the training data, the model computes a predicted rating by taking the dot product of the corresponding user $u_i$ and item $v_j$ latent factor vectors.The predicted rating of user $i$ to item $j$ is denoted as $\hat{r}_{ij}$.
+
+$$\hat{r_{ij}} = \sum_{i,j}^{k} u_{i} \cdot v_{j}$$
+
 Loss function:
 $$J = \frac{1}{2} \sum_{i,j} \left( r_{ij} - \sum_{i,j}^{k} u_{i} \cdot v_{j} \right)^2$$
 
