@@ -54,7 +54,7 @@ $${Similarity}(u, v) = \frac{\sum_{i}(r_{ui} - \mu_u)(r_{vi} - \mu_v)}{\sqrt{\su
 2. The **k-nearest neighbors $N(u)$** for a target user $u$ are found based on the Pearson similarity scores. 
 
 3. Predict the potential ratings. Since different users may have different rating scale, ratings are normalized first.
-$$\hat{r}_{ui} = \mu_u + \frac{\sum_{v \in N(u)} \text{similarity}(u, v) \cdot (r_{vi} - \mu_v)}{\sum_{v \in N(u)} |\text{similarity}(u, v)|}$$
+$$\hat{r_{ui}} = \mu_u + \frac{\sum_{v \in N(u)} \text{similarity}(u, v) \cdot (r_{vi} - \mu_v)}{\sum_{v \in N(u)} |\text{similarity}(u, v)|}$$
 
 ## Item-Based Collaborative Filtering
 Item-Based Collaborative Filtering
@@ -66,7 +66,7 @@ $${similarity}(i, j) = \frac{\sum_{u}(r_{ui} - \mu_i)(r_{uj} - \mu_j)}{\sqrt{\su
 2. The **k-nearest neighbors $N(i)$** for a target item $i$ are found based on the Adjusted Cosine Similarity.
 
 3. Predict the potential ratings.
-$$\hat{r}_{ui} = \frac{\sum_{j \in N(i)} \text{similarity}(i, j) \cdot r_{uj}}{\sum_{j \in N(i)} |\text{similarity}(i, j)|}$$
+$$\hat{r_{ui}} = \frac{\sum_{j \in N(i)} \text{similarity}(i, j) \cdot r_{uj}}{\sum_{j \in N(i)} |\text{similarity}(i, j)|}$$
 
 
 ## Dimensionality Reduction Collaborative Filtering
